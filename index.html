@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarvesh Web Studio | Bilingual Brochure</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="screen-tools" aria-label="Brochure controls">
+      <div class="language-switch" role="group" aria-label="Choose brochure language">
+        <button class="lang-button active" type="button" data-lang-button="en">EN</button>
+        <button class="lang-button" type="button" data-lang-button="de">DE</button>
+      </div>
+      <button class="print-button" type="button" data-print>
+        <span class="icon-small" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/><path d="M8 6h8"/></svg>
+        </span>
+        <span data-i18n="printButton">Print / Save PDF</span>
+      </button>
+    </div>
+
+    <main class="brochure" data-lang="en">
+      <section class="sheet page-offer" aria-label="Offer and services">
+        <header class="topbar">
+          <a class="brand" href="#" aria-label="Sarvesh Web Studio">
+            <span class="brand-mark">S</span>
+            <span>
+              <span class="brand-name">Sarvesh</span>
+              <span class="brand-sub">Web Studio</span>
+            </span>
+          </a>
+          <nav class="nav">
+            <a href="#services" data-i18n="navServices">Services</a>
+            <a href="#pricing" data-i18n="navPricing">Pricing</a>
+            <a href="#process" data-i18n="navProcess">Process</a>
+            <a href="#terms" data-i18n="navTerms">Terms</a>
+            <a href="#contact" data-i18n="navContact">Contact</a>
+          </nav>
+          <div class="language-switch in-page" role="group" aria-label="Choose brochure language">
+            <button class="lang-button active" type="button" data-lang-button="en">EN</button>
+            <button class="lang-button" type="button" data-lang-button="de">DE</button>
+          </div>
+        </header>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="section-label" data-i18n="heroLabel">Web design for local businesses</p>
+            <h1 data-i18n="heroTitle">Modern websites for local businesses in Magdeburg.</h1>
+            <p class="lead" data-i18n="intro">
+              I build clean, mobile-friendly websites for small businesses that want to look more professional online, attract more customers, and make it easier for people to contact, book, or visit them.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-action" href="#pricing">
+                <span data-i18n="viewPricing">View pricing</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </a>
+              <a class="secondary-action" href="mailto:sorbywtv@gmail.com">
+                <span data-i18n="contactAction">Request a consultation</span>
+              </a>
+            </div>
+          </div>
+          <div class="device-showcase" aria-label="Website preview illustration">
+            <div class="browser-frame">
+              <div class="browser-bar"><span></span><span></span><span></span></div>
+              <div class="preview-card">
+                <p data-i18n="previewSmall">LOCAL BUSINESS</p>
+                <h2 data-i18n="previewTitle">A website that feels ready.</h2>
+                <div class="preview-lines">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <p data-i18n="phoneTitle">Book. Call. Visit.</p>
+              <span data-i18n="phoneButton">Open now</span>
+            </div>
+            <div class="city-line" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <section class="section-block" id="services">
+          <div class="section-heading">
+            <span></span>
+            <h2 data-i18n="servicesTitle">Services</h2>
+            <span></span>
+          </div>
+          <div class="service-grid">
+            <article class="service-item">
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H4z"/><path d="M8 21h8"/><path d="M12 16v5"/></svg></i>
+              <h3 data-i18n="serviceRestaurant">Restaurant websites</h3>
+            </article>
+            <article class="service-item">
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m14 4 6 6"/><path d="m4 20 7-7"/><path d="m10 6 8 8"/><path d="m2 14 8 8"/></svg></i>
+              <h3 data-i18n="serviceBarber">Barber shop websites</h3>
+            </article>
+            <article class="service-item">
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10Z"/><path d="M9 14c1.5 1.5 4.5 1.5 6 0"/></svg></i>
+              <h3 data-i18n="serviceSalon">Salon websites</h3>
+            </article>
+            <article class="service-item">
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 8h12v5a6 6 0 0 1-12 0Z"/><path d="M18 9h1a3 3 0 0 1 0 6h-1"/><path d="M4 21h16"/></svg></i>
+              <h3 data-i18n="serviceCafe">Cafe websites</h3>
+            </article>
+            <article class="service-item">
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-7h6v7"/></svg></i>
+              <h3 data-i18n="serviceSmallBusiness">Small business websites</h3>
+            </article>
+            <article class="service-item">
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v12"/><path d="M8 12h8"/><path d="M8 16h5"/></svg></i>
+              <h3 data-i18n="servicePortfolio">Portfolio / personal brand websites</h3>
+            </article>
+          </div>
+        </section>
+
+        <section class="offer-layout" id="pricing">
+          <article class="included-panel">
+            <p class="section-label" data-i18n="includedLabel">What's included</p>
+            <h2 data-i18n="includedTitle">Everything a local business website needs to start strong.</h2>
+            <ul class="check-list" data-list="included"></ul>
+          </article>
+
+          <article class="price-card">
+            <div class="price-card-head">
+              <p data-i18n="optionOne">Option 1</p>
+              <h2 data-i18n="ownershipTitle">Full Ownership Website</h2>
+            </div>
+            <div class="price">
+              <strong>€500</strong>
+              <span data-i18n="oneTime">one-time</span>
+            </div>
+            <ul class="check-list compact" data-list="ownershipIncludes"></ul>
+            <p class="fine-print" data-i18n="ownershipNote">Client pays for and owns their own domain. I help connect it.</p>
+          </article>
+
+          <article class="price-card featured">
+            <div class="popular-strip" data-i18n="popular">Lower upfront cost</div>
+            <div class="price-card-head">
+              <p data-i18n="optionTwo">Option 2</p>
+              <h2 data-i18n="managedTitle">Managed Website Plan</h2>
+            </div>
+            <div class="price">
+              <strong>€300</strong>
+              <span data-i18n="monthlyPrice">upfront + €45/month</span>
+            </div>
+            <ul class="check-list compact" data-list="managedIncludes"></ul>
+            <p class="fine-print" data-i18n="managedNote">Monthly payment starts after the first free month.</p>
+          </article>
+        </section>
+
+        <footer class="sheet-footer">
+          <span>Sarvesh</span>
+          <span>Magdeburg, Germany</span>
+          <a href="mailto:sorbywtv@gmail.com">sorbywtv@gmail.com</a>
+          <a href="tel:+4915216474973">+49 152 16474973</a>
+          <span data-i18n="pageOne">Page 1 of 2</span>
+        </footer>
+      </section>
+
+      <section class="sheet page-process" aria-label="Process and agreement">
+        <header class="topbar compact-topbar">
+          <a class="brand" href="#" aria-label="Sarvesh Web Studio">
+            <span class="brand-mark">S</span>
+            <span>
+              <span class="brand-name">Sarvesh</span>
+              <span class="brand-sub">Web Studio</span>
+            </span>
+          </a>
+          <div class="contact-line">
+            <span>Magdeburg, Germany</span>
+            <a href="mailto:sorbywtv@gmail.com">sorbywtv@gmail.com</a>
+            <a href="tel:+4915216474973">+49 152 16474973</a>
+          </div>
+        </header>
+
+        <section class="process-section" id="process">
+          <div class="section-heading centered">
+            <span></span>
+            <h2 data-i18n="processTitle">How it works</h2>
+            <span></span>
+          </div>
+          <p class="section-intro" data-i18n="processIntro">A clear six-step process from first conversation to launch.</p>
+          <div class="process-line" data-list="process"></div>
+        </section>
+
+        <section class="terms-section" id="terms">
+          <div class="section-heading">
+            <span></span>
+            <h2 data-i18n="termsTitle">Basic agreement / terms</h2>
+            <span></span>
+          </div>
+          <div class="terms-grid">
+            <article>
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Z"/><path d="M14 3v6h6"/></svg></i>
+              <div>
+                <h3 data-i18n="termOwnershipTitle">Ownership</h3>
+                <ul data-list="ownershipTerms"></ul>
+              </div>
+            </article>
+            <article>
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-4 7-10a7 7 0 1 0-14 0c0 6 7 10 7 10Z"/><circle cx="12" cy="11" r="2"/></svg></i>
+              <div>
+                <h3 data-i18n="termDomainTitle">Domain</h3>
+                <ul data-list="domainTerms"></ul>
+              </div>
+            </article>
+            <article>
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16v10H4z"/><path d="M8 11h8"/><path d="M8 15h5"/></svg></i>
+              <div>
+                <h3 data-i18n="termPaymentTitle">Payment</h3>
+                <ul data-list="paymentTerms"></ul>
+              </div>
+            </article>
+            <article>
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21a9 9 0 0 0 9-9h-4l5-5 5 5h-4A11 11 0 1 1 12 1"/><path d="M12 7v5l3 2"/></svg></i>
+              <div>
+                <h3 data-i18n="termFirstMonthTitle">First Month Support</h3>
+                <ul data-list="firstMonthTerms"></ul>
+              </div>
+            </article>
+            <article>
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/><path d="M8 6v12"/></svg></i>
+              <div>
+                <h3 data-i18n="termMonthlyTitle">Monthly Support</h3>
+                <ul data-list="monthlyTerms"></ul>
+              </div>
+            </article>
+            <article>
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v6c0 5 3.5 8 8 8s8-3 8-8V7Z"/><path d="m9 12 2 2 4-4"/></svg></i>
+              <div>
+                <h3 data-i18n="termClientTitle">Client Responsibility</h3>
+                <ul data-list="clientTerms"></ul>
+              </div>
+            </article>
+            <article>
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"/></svg></i>
+              <div>
+                <h3 data-i18n="termRefundsTitle">Refunds</h3>
+                <ul data-list="refundTerms"></ul>
+              </div>
+            </article>
+            <article>
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 6h12"/><path d="M6 18h12"/><path d="M8 6v12"/><path d="M16 6v12"/><path d="m10 10 4 4"/><path d="m14 10-4 4"/></svg></i>
+              <div>
+                <h3 data-i18n="termCancellationTitle">Cancellation</h3>
+                <ul data-list="cancellationTerms"></ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="closing-band">
+          <div>
+            <h2 data-i18n="closingTitle">Ready to look more professional online?</h2>
+            <p data-i18n="closingText">Let’s create a website that helps customers contact, book, or visit your business more easily.</p>
+          </div>
+          <a class="primary-action" href="mailto:sorbywtv@gmail.com">
+            <span data-i18n="contactAction">Request a consultation</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </section>
+
+        <section class="contact-section" id="contact">
+          <div class="section-heading">
+            <span></span>
+            <h2 data-i18n="contactTitle">Get in touch</h2>
+            <span></span>
+          </div>
+          <p class="section-intro" data-i18n="contactIntro">Have a local business in Magdeburg? Send a message and I’ll help you choose the right website option.</p>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></i>
+              <div>
+                <h3 data-i18n="contactEmailTitle">Email</h3>
+                <a class="contact-value" href="mailto:sorbywtv@gmail.com">sorbywtv@gmail.com</a>
+                <a class="contact-cta" href="mailto:sorbywtv@gmail.com" data-i18n="contactEmailCta">Email Me</a>
+              </div>
+            </article>
+            <article class="contact-card">
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.6a2 2 0 0 1-.45 2.11L8 9.71a16 16 0 0 0 6.29 6.29l1.28-1.28a2 2 0 0 1 2.11-.45c.83.29 1.7.5 2.6.62A2 2 0 0 1 22 16.92Z"/></svg></i>
+              <div>
+                <h3 data-i18n="contactPhoneTitle">Local number</h3>
+                <a class="contact-value" href="tel:+4915216474973">+49 152 16474973</a>
+                <a class="contact-cta" href="tel:+4915216474973" data-i18n="contactPhoneCta">Call Local Number</a>
+              </div>
+            </article>
+            <article class="contact-card">
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.85 7L4 20l1.45-4.05A8 8 0 1 1 20 11.5Z"/><path d="M9 9.5c.4 2 2 3.6 4 4l1.2-1.2"/></svg></i>
+              <div>
+                <h3>WhatsApp</h3>
+                <a class="contact-value" href="https://wa.me/971567059467" target="_blank" rel="noopener">+971 56 705 9467</a>
+                <a class="contact-cta" href="https://wa.me/971567059467" target="_blank" rel="noopener" data-i18n="contactWhatsappCta">Message on WhatsApp</a>
+              </div>
+            </article>
+            <article class="contact-card">
+              <i aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><path d="M17 7h.01"/></svg></i>
+              <div>
+                <h3>Instagram</h3>
+                <a class="contact-value" href="https://www.instagram.com/sorbystudio/" target="_blank" rel="noopener noreferrer">@sorbystudio</a>
+                <a class="contact-cta" href="https://www.instagram.com/sorbystudio/" target="_blank" rel="noopener noreferrer" data-i18n="contactInstagramCta">Instagram</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <footer class="sheet-footer">
+          <span>Sarvesh</span>
+          <span>Magdeburg, Germany</span>
+          <a href="mailto:sorbywtv@gmail.com">sorbywtv@gmail.com</a>
+          <a href="tel:+4915216474973">+49 152 16474973</a>
+          <span data-i18n="pageTwo">Page 2 of 2</span>
+        </footer>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
