@@ -444,7 +444,8 @@ h1 {
 .section-block,
 .offer-layout,
 .process-section,
-.terms-section {
+.terms-section,
+.contact-section {
   position: relative;
   z-index: 1;
 }
@@ -497,7 +498,8 @@ h1 {
 }
 
 .service-item i,
-.terms-grid i {
+.terms-grid i,
+.contact-card i {
   display: grid;
   flex: 0 0 auto;
   width: 34px;
@@ -509,7 +511,8 @@ h1 {
 }
 
 .service-item svg,
-.terms-grid svg {
+.terms-grid svg,
+.contact-card svg {
   width: 18px;
   height: 18px;
 }
@@ -683,13 +686,11 @@ h1 {
 }
 
 .sheet-footer {
-  position: absolute;
   z-index: 1;
-  right: 48px;
-  bottom: 24px;
-  left: 48px;
+  position: relative;
   justify-content: space-between;
   gap: 12px;
+  margin-top: 24px;
   padding-top: 14px;
   border-top: 1px solid var(--line);
   color: var(--muted);
@@ -704,6 +705,11 @@ h1 {
   color: var(--muted);
   font-size: 11px;
   font-weight: 720;
+}
+
+.contact-line a,
+.sheet-footer a {
+  color: inherit;
 }
 
 .process-section {
@@ -854,6 +860,116 @@ h1 {
   box-shadow: none;
 }
 
+.contact-section {
+  margin-top: 28px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 13px;
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.64);
+}
+
+.contact-card > i {
+  width: 38px;
+  min-width: 38px;
+  max-width: 38px;
+  height: 38px;
+  min-height: 38px;
+  max-height: 38px;
+  align-self: start;
+  overflow: hidden;
+}
+
+.contact-card > i svg {
+  width: 18px;
+  min-width: 18px;
+  max-width: 18px;
+  height: 18px;
+  min-height: 18px;
+  max-height: 18px;
+  flex: 0 0 18px;
+}
+
+.contact-card h3 {
+  margin-bottom: 7px;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.contact-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 8px 11px;
+  border: 1px solid rgba(201, 190, 169, 0.78);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 690;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.contact-value::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.contact-value:hover {
+  border-color: var(--brass);
+  background: var(--brass-soft);
+  color: var(--navy);
+  transform: translateY(-1px);
+}
+
+.contact-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 0 13px;
+  border-radius: 999px;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 820;
+}
+
+.contact-cta::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+
 @media (max-width: 860px) {
   .brochure {
     width: 100%;
@@ -909,6 +1025,7 @@ h1 {
   .offer-layout,
   .process-line,
   .terms-grid,
+  .contact-grid,
   .closing-band {
     grid-template-columns: 1fr;
   }
@@ -934,6 +1051,10 @@ h1 {
 }
 
 @media (max-width: 520px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .screen-tools {
     justify-content: space-between;
   }
@@ -943,6 +1064,9 @@ h1 {
   }
 
   .sheet {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     padding-inline: 18px;
   }
 
@@ -964,6 +1088,53 @@ h1 {
     width: 100%;
   }
 
+  .hero-copy,
+  .device-showcase,
+  .browser-frame,
+  .preview-card {
+    min-width: 0;
+  }
+
+  .device-showcase {
+    min-height: 255px;
+    overflow: hidden;
+  }
+
+  .browser-frame {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    max-width: none;
+    min-height: 230px;
+  }
+
+  .preview-card {
+    margin: 18px;
+    padding: 20px;
+  }
+
+  .preview-card h2 {
+    max-width: 210px;
+    font-size: 24px;
+  }
+
+  .phone-frame {
+    right: -8px;
+    bottom: 18px;
+    width: 106px;
+    min-height: 158px;
+    padding: 17px 11px 12px;
+  }
+
+  .phone-notch {
+    margin-bottom: 28px;
+  }
+
+  .phone-frame p {
+    margin-bottom: 24px;
+    font-size: 18px;
+  }
+
   .service-item {
     min-height: 64px;
   }
@@ -973,135 +1144,102 @@ h1 {
   }
 }
 
-@page {
-  size: A4 portrait;
-  margin: 0;
-}
-
 @media print {
-  html,
-  body {
-    width: 210mm;
-    background: white;
-  }
-
-  .screen-tools {
-    display: none;
-  }
-
-  .brochure {
-    display: block;
-    width: 210mm;
-    margin: 0;
-    padding: 0;
-  }
-
-  .sheet {
-    width: 210mm;
-    min-height: 297mm;
-    height: 297mm;
-    margin: 0;
-    padding: 12mm 12mm 10mm;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    page-break-after: always;
-    break-after: page;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-
-  .sheet:last-child {
-    page-break-after: auto;
-    break-after: auto;
-  }
-
-  .sheet::before {
-    inset: 5mm;
-  }
-
-  .topbar {
-    margin-bottom: 10mm;
-  }
-
-  .compact-topbar {
-    margin-bottom: 8mm;
-  }
-
   .screen-tools,
+  .language-switch,
+  .print-button,
   .in-page {
     display: none !important;
   }
 
-  .nav {
-    display: flex;
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    text-shadow: none !important;
+    transition: none !important;
   }
 
-  .hero-grid {
-    grid-template-columns: 1.02fr 0.82fr;
-    gap: 10mm;
-    padding-bottom: 8mm;
+  html,
+  body {
+    background: #f8f6f1 !important;
+    background-attachment: scroll !important;
+    background-image: none !important;
   }
 
-  h1 {
-    font-size: 42pt;
+  .brochure {
+    background: transparent !important;
   }
 
-  .lead {
-    font-size: 10.6pt;
-    line-height: 1.48;
+  .sheet {
+    overflow: visible;
+    background: #fffefb !important;
+    background-image: none !important;
+    border: 1px solid var(--line-dark);
   }
 
-  .section-block {
-    padding: 8mm 0 6mm;
+  .sheet::before {
+    border-color: var(--line);
   }
 
-  .offer-layout {
-    gap: 3.2mm;
+  .browser-frame,
+  .phone-frame,
+  .service-item,
+  .price-card,
+  .terms-grid article,
+  .contact-card {
+    background: #ffffff !important;
+    background-image: none !important;
+    border-color: var(--line-dark);
   }
 
   .included-panel,
-  .price-card {
-    padding: 5mm;
-  }
-
-  .included-panel h2 {
-    font-size: 20pt;
-  }
-
-  .price-card h2 {
-    font-size: 16pt;
-  }
-
-  .price strong {
-    font-size: 25pt;
-  }
-
-  .process-section {
-    padding-bottom: 7mm;
-  }
-
-  .terms-grid {
-    gap: 2.5mm;
-  }
-
-  .terms-grid article {
-    min-height: 26mm;
-    padding: 3.6mm;
-  }
-
+  .preview-card,
   .closing-band {
-    margin-top: 6mm;
-    padding: 5mm 6mm;
+    background: var(--navy) !important;
+    background-image: none !important;
   }
 
-  .closing-band h2 {
-    font-size: 20pt;
+  .service-item i,
+  .terms-grid i,
+  .contact-card i,
+  .popular-strip {
+    background: var(--brass-soft) !important;
+    background-image: none !important;
   }
 
-  .sheet-footer {
-    right: 12mm;
-    bottom: 6mm;
-    left: 12mm;
+  .contact-card > i {
+    width: 38px !important;
+    min-width: 38px !important;
+    max-width: 38px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    max-height: 38px !important;
+  }
+
+  .contact-card > i svg {
+    width: 18px !important;
+    min-width: 18px !important;
+    max-width: 18px !important;
+    height: 18px !important;
+    min-height: 18px !important;
+    max-height: 18px !important;
+  }
+
+  .contact-value,
+  .contact-cta {
+    background: #ffffff !important;
+    border: 1px solid var(--line-dark) !important;
+    color: var(--navy) !important;
+    transform: none !important;
+  }
+
+  .city-line {
+    display: none !important;
   }
 }
